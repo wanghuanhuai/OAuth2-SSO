@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面2</title>
+</head>
+<body>
+
+<h2>标准登录页面</h2>
+<h3>表单登录</h3>
+<form action="/api/login/account" method="post">
+    <table >
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="username"/></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="password"/></td>
+        </tr>
+        <tr>
+            <td>
+            <label><input type="checkbox" id="rememberme" name="remember-me"/>记住我</label>
+            </td>
+        </tr>
+        <tr>
+            <TD>
+                <BUTTON type="submit">登录</BUTTON>
+            </TD>
+
+        </tr>
+    </table>
+</form>
+
+<h3>图片验证登录</h3>
+<form action="/api/login/account" method="post">
+    <table >
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="username"/></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="password"/></td>
+        </tr>
+        <tr>
+            <td>图片验证码</td>
+            <td>
+                <input type="text" name = "imageCode">
+                <input type="image" src="/code/image?width=160" onclick="this.src=this.src+'?'" title="点击图片刷新验证码" />
+            </td>
+        </tr>
+        <tr>
+            <TD>
+                <BUTTON type="submit">登录</BUTTON>
+            </TD>
+
+        </tr>
+    </table>
+</form>
+
+
+<h3>短信登录</h3>
+<form action="/api/login/mobile" method="post">
+    <table >
+        <tr>
+            <td>手机号:</td>
+            <td><input type="text" name="mobile" value="1311111112"/></td>
+        </tr>
+        <tr>
+            <td>短信验证码</td>
+            <td>
+                <input type="text" name = "smsCode">
+                <a  href="/code/sms?mobile=1311111112">发送短信验证码 </a>
+            </td>
+        </tr>
+        <tr>
+            <TD>
+                <BUTTON type="submit">登录</BUTTON>
+            </TD>
+
+        </tr>
+    </table>
+</form>
+
+<h3>图片验证登录</h3>
+<a href="/login/qq" >qq登录</a>
+<br>
+<a href="/login/weixin" >微信登录</a>
+</body>
+</html>
